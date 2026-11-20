@@ -1,0 +1,224 @@
+
+/****************************************** Card ******************************************/
+
+.custom-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.custom-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.custom-card hr {
+    margin: 0.5rem 0 1rem;
+    border-color: var(--text-muted);
+}
+
+
+/****************************************** SearchInput ******************************************/
+
+/* container for media buttons */
+.media-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 0.75rem 0;
+    flex-wrap: wrap;
+}
+
+/* media buttons */
+.media-btn {
+    flex: 1;
+    border: 1px solid var(--border);
+    background-color: var(--card-background);
+    color: var(--text);
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.media-btn:hover {
+    background-color: #f1f3f5;
+}
+
+.media-btn.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--border);
+}
+
+/* submit button */
+.search-btn {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 10px;
+    padding: 0.4rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid var(--border);
+}
+
+.search-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* More dropdown */
+.media-select {
+    flex: 1;
+    width: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* place the input box & submit button next to one another */
+.search-control {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* allows 'x' to be inside the input */
+.input-container {
+    position: relative;
+    flex: 1;
+}
+
+/* stop text overlapping the 'x' button */
+.input-container input {
+    padding-right: 2.5rem;
+}
+
+/* put the x on the right hand side of the input box */
+.clear-search {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/****************************************** Results & Favourites ******************************************/
+
+/* Shared layout for headings and rows */
+.result-header,
+.result-item,
+.favourite-header,
+.favourite-item {
+    display: grid;
+    grid-template-columns: 90px 100px 1fr 2fr 140px 100px;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 10px;
+}
+
+.result-item img,
+.favourite-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Shared heading styling */
+.result-header,
+.favourite-header {
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Shared row styling */
+.result-item,
+.favourite-item {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Remove default paragraph spacing */
+.result-header p,
+.result-item p,
+.favourite-header p,
+.favourite-item p {
+    margin: 0;
+}
+
+/* Centre number column */
+.result-header p:first-child,
+.result-item p:first-child,
+.favourite-header p:first-child,
+.favourite-item p:first-child {
+    text-align: center;
+}
+
+/* Centre final heading column */
+.result-header p:last-child,
+.favourite-header p:last-child {
+    text-align: center;
+}
+
+/* Row hover */
+.result-item:hover,
+.favourite-item:hover {
+    background-color: #f5f5f5;
+}
+
+
+/****************************************** Search Results ******************************************/
+
+/* Favourite star */
+.favourite-btn {
+    justify-self: center;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Favourite star on hover */
+.favourite-btn:hover {
+    color: black;
+    transform: scale(1.2);
+}
+
+/* Favourite star while being clicked */
+.favourite-btn:active {
+    transform: scale(0.9);
+}
+
+/* Make it clearer no results were found */
+.no-results {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.no-results h5 {
+    font-size: 2rem;
+}
+
+/****************************************** Favourites ******************************************/
+
+/* Centre remove button */
+.remove-btn {
+    justify-self: center;
+}
+
+/* Remove button on hover */
+.remove-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Remove button while being clicked */
+.remove-btn:active {
+    transform: scale(0.9);
+}

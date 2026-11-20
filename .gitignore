@@ -1,0 +1,14 @@
+# Ignore node_modules anywhere in the project
+node_modules/
+
+# Emacs temporary/backup files anywhere
+*~
+\#*\#
+.\#*
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
